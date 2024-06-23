@@ -1,0 +1,1 @@
+# This file is used to initialize the FinancialManager 1.0 package
