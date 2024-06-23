@@ -1,8 +1,11 @@
 # Ignore all files and directories in parent directories
 ../*
 
-# Ignore all files in TestCases
+# Ignore these files
 TestCases/
+output.csv
+uncategorized.txt
+categorization_rules.json
 
 # Keep the current directory
 !./
