@@ -1,5 +1,6 @@
 from data_importer import DataImport
 from file_handler import FileHandler
+from categorizer import Categorizer
 
 def main():
     output_file = 'output.csv'
@@ -9,15 +10,9 @@ def main():
     data_importer = DataImport(sample_csv, bank)
     data_importer.load_data()
 
-    # Debugging statement to check loaded data
-    if data_importer.data:
-        print(f"Loaded data for {bank} from {sample_csv}:")
-        for i, entry in enumerate(data_importer.data):
-            print(entry)
-            if i >= 4:  # Limit to first 5 entries for readability
-                break
-    else:
-        print(f"No data loaded for {bank} from {sample_csv}")
+    # Categorize data
+    categorizer = Categorizer()
+    categorized_data = categorizer.categorize(data_importer.data)
 
     file_handler = FileHandler(output_file)
 

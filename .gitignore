@@ -1,6 +1,9 @@
 # Ignore all files and directories in parent directories
 ../*
 
+# Ignore all files in TestCases
+TestCases/
+
 # Keep the current directory
 !./
 
