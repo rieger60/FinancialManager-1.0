@@ -8,21 +8,33 @@ FinancialManager is a simple program to manage personal finances.
 - Generate financial reports
 - Budget management
 
-## Installation
+## Setup Instructions
+
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/rieger60/FinancialManager.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd FinancialManager
-   ```
-3. Create a virtual environment and install dependencies:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   pip install -r requirements.txt
-   ```
+    ```sh
+    git clone https://github.com/yourusername/FinancialManager.git
+    cd FinancialManager
+    ```
+
+2. Run the setup script:
+    - For Windows:
+        ```sh
+        setup.py
+        ```
+    - For macOS/Linux:
+        ```sh
+        chmod +x setup.sh
+        ./setup.sh
+        ```
+
+This will install the necessary packages and handle SSL certificates.
+
+## Running the Application
+
+To run the application, use:
+    ```sh
+    python main.py
+    ```
 
 ## Usage
 ```bash
