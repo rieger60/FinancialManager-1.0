@@ -1,0 +1,15 @@
+# Ignore all files and directories in parent directories
+../*
+
+# Keep the current directory
+!./
+
+# Ignore virtual environment directly (if applicable)
+venv/
+
+# Ignore python cache files
+__pycache__/
+
+# Ignore log files and temporary files
+*.log
+*.tmp
