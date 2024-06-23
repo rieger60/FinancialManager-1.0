@@ -1,7 +1,9 @@
+import certifi
 from currency_converter import CurrencyConverter, ECB_URL
 from datetime import date, datetime
 import hashlib
 import logging
+import os
 import pandas as pd
 import tabula
 
@@ -35,6 +37,9 @@ class DataImport:
 		self.file_path = file_path
 		self.bank = bank
 		self.data = None
+
+		os.environ['SSL_CERT_FILE'] = certifi.where()
+
 		self.currency_converter = currency_converter or CurrencyConverter(ECB_URL, 
 															fallback_on_wrong_date=True, 
 															fallback_on_missing_rate=True)
