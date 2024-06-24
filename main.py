@@ -1,6 +1,8 @@
 from data_importer import DataImport
+from duplicate_checker import DuplicateChecker
 from file_handler import FileHandler
 from categorizer import Categorizer
+from utility_functions import UtilityFunction
 
 def main():
     output_file = 'output.csv'
@@ -8,8 +10,14 @@ def main():
     bank = 'Danske Bank'
     rules_file = 'categorization_rules.json'
 
+    #check if output file exists
+    check_existing_output = UtilityFunction(output_file)
+    check_existing_output.create_output_file_if_not_exists()
+
     data_importer = DataImport(sample_csv, bank)
     data_importer.load_data()
+    duplicate_checker = DuplicateChecker(data_importer.data, output_file)
+    duplicate_checker.remove_duplicates()
     file_handler = FileHandler(output_file)
 
     if not data_importer.data:

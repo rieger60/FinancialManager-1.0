@@ -39,3 +39,6 @@ To run the application, use:
 ## Usage
 ```bash
 python main.py
+
+## Current issues:
+The program is not running as expected. We should carefully check the program from start to finish and carry out thorough test first
